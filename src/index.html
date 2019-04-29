@@ -1,50 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Test</title>
-    <link rel="stylesheet" type="text/css" href="screen.css" />
-    <script defer src="main.js" type="text/javascript" charset="utf-8"></script>
-  </head>
-  <body>
-    <form>
-      <div class="tab" id="days">Days of the week</div>
-      <div class="tab" id="date">Date picker</div>
-      <div class="tab" id="input">User Input</div>
-      <div class="tabContent" id="days-of-the-week">
-        <input type="checkbox" value="MON" /> Monday
-        <input type="checkbox" value="TUE" /> Tuesday
-        <input type="checkbox" value="WED" /> Wednesday
-        <input type="checkbox" value="THU" /> Thursday
-        <input type="checkbox" value="FRI" /> Friday
-        <input type="checkbox" value="SAT" /> Saturday
-        <input type="checkbox" value="SUN" /> Sunday
-      </div>
-      <div class="tabContent" id="date-picker">
-        <input type="hidden" value="" id="date" />
-        <select id="day">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>...</option>
-          <option>31</option>
-        </select>
-        <select id="month">
-          <option>...</option>
-        </select>
-        <select id="year">
-          <option>-10..+10</option>
-        </select>
-      </div>
-      <div class="tabContent" id="user-input">
-        <!-- parse it to fields above -->
-        <input type="text" value="" id="input" />
-      </div>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Tab Picker</title>
+		<link rel="stylesheet" type="text/css" href="screen.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<form class="border">
+				<div class="row">
+					<div class="tab" id="days">Days of the week</div>
+					<div class="tab" id="date">Date picker</div>
+					<div class="tab" id="input">User Input</div>
+				</div>
+				<div class="row">
+					<div class="tabContent" id="days-of-the-week">
+						<input type="checkbox" value="MON" /> Monday
+						<input type="checkbox" value="TUE" /> Tuesday
+						<input type="checkbox" value="WED" /> Wednesday
+						<input type="checkbox" value="THU" /> Thursday
+						<input type="checkbox" value="FRI" /> Friday
+						<input type="checkbox" value="SAT" /> Saturday
+						<input type="checkbox" value="SUN" /> Sunday
+					</div>
+				</div>
 
-      <input type="submit" value="Run" id="submit" />
-
-      <!-- final format: MON,TUE,FRI or 05/12/2011 -->
-      <input type="text" value="" id="result" placeholder="Result" />
-    </form>
-  </body>
+				<div class="row">
+					<div class="tabContent" id="date-picker">
+						<input type="hidden" value="" id="date" />
+						<select id="day">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+							<option>13</option>
+							<option>14</option>
+							<option>15</option>
+							<option>16</option>
+							<option>17</option>
+							<option>18</option>
+							<option>19</option>
+							<option>20</option>
+							<option>21</option>
+							<option>22</option>
+							<option>23</option>
+							<option>24</option>
+							<option>25</option>
+							<option>26</option>
+							<option>27</option>
+							<option>28</option>
+							<option>29</option>
+							<option>30</option>
+							<option>31</option>
+						</select>
+						<select id="month">
+							<option>January</option>
+							<option>February</option>
+							<option>March</option>
+							<option>April</option>
+							<option>May</option>
+							<option>June</option>
+							<option>July</option>
+							<option>August</option>
+							<option>September</option>
+							<option>October</option>
+							<option>November</option>
+							<option>December</option>
+						</select>
+						<select id="year">
+							<option>-10..+10</option>
+						</select>
+					</div>
+				</div>
+				<!-- <div class="tabContent" id="user-input"> -->
+				<!-- parse it to fields above
+				<input type="text" value="" id="input" />
+			</div> -->
+				<div class="row">
+					<div class="submit" id="submit">
+						<div>
+							<input
+								type="submit"
+								value="Run"
+								id="submit"
+								class="run"
+							/>
+						</div>
+						<div>
+							<!-- final format: MON,TUE,FRI or 05/12/2011 -->
+							<input
+								type="text"
+								value=""
+								id="result"
+								placeholder="Result"
+							/>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script defer src="main.js" type="text/javascript" charset="utf-8"></script>
 </html>
